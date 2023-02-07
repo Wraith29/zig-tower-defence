@@ -20,6 +20,7 @@ pub fn build(b: *std.build.Builder) void {
     exe.addLibraryPath(sdl_path ++ "lib\\x64");
     b.installBinFile(sdl_path ++ "lib\\x64\\SDL2.dll", "SDL2.dll");
     exe.linkSystemLibrary("sdl2");
+    exe.addPackagePath("sdl", "libs/sdl/sdl.zig");
     exe.linkLibC();
 
     exe.install();

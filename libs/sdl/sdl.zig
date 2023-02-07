@@ -2,14 +2,14 @@ const std = @import("std");
 const c = @cImport(@cInclude("SDL.h"));
 
 const allocator = std.heap.c_allocator;
-const event = @import("./sdl/event.zig");
-const window = @import("./sdl/window.zig");
-const renderer = @import("./sdl/renderer.zig");
-const colour = @import("./sdl/colour.zig");
-const rect = @import("./sdl/rect.zig");
-const point = @import("./sdl/point.zig");
+const event = @import("./event.zig");
+const window = @import("./window.zig");
+const renderer = @import("./renderer.zig");
+const colour = @import("./colour.zig");
+const rect = @import("./rect.zig");
+const point = @import("./point.zig");
 
-pub const panic = @import("./sdl/panic.zig").panic;
+pub const panic = @import("./panic.zig").panic;
 pub const Event = event.Event;
 pub const Scancode = event.Scancode;
 pub const pollEvent = event.pollEvent;
